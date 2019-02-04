@@ -148,22 +148,22 @@ body {
   width: 80%;
   margin: 0 auto;
 }
-body .top-bar {
+body .top-content {
   display: flex;
   justify-content: space-between;
   align-content: center;
   width: 100%;
   height: 100vh;
 }
-body .top-bar .logo .logo-image {
+body .top-content .logo .logo-image {
   width: 200px;
   margin-top: 2rem;
   padding: 2rem 1rem 2rem 2rem;
   background: #99aabb;
   margin-bottom: -2px;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
 }
-body .top-bar .top-nav {
+body .top-content .top-nav {
   padding: 0;
   width: 50%;
   margin-top: 2rem;
@@ -172,15 +172,49 @@ body .top-bar .top-nav {
   justify-content: space-between;
   font-size: 2rem;
 }
-body .top-bar .top-nav a {
+body .top-content .top-nav a {
   padding: 1rem;
   border-radius: 1rem;
   background: #99aabb;
   text-decoration: none;
   color: #221100;
 }
-body .top-content {
+body .top-content div .down-button {
+  position: absolute;
+  bottom: 2rem;
+}
+body .content-box {
+  display: flex;
+  flex-direction: column;
   font-size: 5rem;
   background: yellow;
   height: 100vh;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+body .content-box .content {
+  background: beige;
+  height: 80%;
+}
+body .content-box .down-button {
+  width: 0;
+  height: 0;
+  border-left: 2rem solid transparent;
+  border-right: 2rem solid transparent;
+  border-top: 2rem solid black;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+body .content-box .up-button {
+  width: 0;
+  height: 0;
+  border-left: 2rem solid transparent;
+  border-right: 2rem solid transparent;
+  border-bottom: 2rem solid black;
+  margin-top: 2rem;
+}
+body [data-content="1"],
+body [data-content="3"] {
+  background: green;
 }
