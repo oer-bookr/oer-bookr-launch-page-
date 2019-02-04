@@ -213,6 +213,7 @@ body .content-box .up-button {
   border-right: 2rem solid transparent;
   border-bottom: 2rem solid black;
   margin-top: 2rem;
+  cursor: pointer;
 }
 body [data-content="1"],
 body [data-content="3"] {
