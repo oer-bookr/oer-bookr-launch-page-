@@ -13,10 +13,10 @@ class ContentBox {
         this.data = this.section.dataset.section;
 
         // scrollys
-        this.upScrolly = document.createElement('a');
+        this.upScrolly = document.createElement('div');
         this.upScrolly.classList.add('up-button');
         this.upScrolly.dataset.upButton = `${this.contentSection["content box"]}`;
-        this.downScrolly = document.createElement('a');
+        this.downScrolly = document.createElement('div');
         this.downScrolly.classList.add('down-button');
         this.downScrolly.dataset.downButton = `${this.contentSection["content box"]}`;
 
@@ -32,8 +32,6 @@ class ContentBox {
 
         // event listeners
         window.addEventListener('load', () => this.implement());
-        this.upScrolly.addEventListener('click',() => this.scrollUp());
-        this.downScrolly.addEventListener('click',() => this.scrollDown());
     }
 
     implement() {
@@ -49,25 +47,10 @@ class ContentBox {
             this.downScrolly.classList.add('hide');
         }
     }
-
-    scrollUp() {
-        let here = this.data - 1;
-        let scrollUpTo = document.querySelector(`.content-box[data-section = '${here}']`);
-        scrollUpTo.scrollIntoView({
-            behavior: "smooth"
-        });
-    }
-
-    scrollDown() {
-        let here = this.data + 1;
-        let scrollDownTo = document.querySelector(`.content-box[data-section = '${here}']`);
-        scrollDownTo.scrollIntoView({
-            behavior: "smooth"
-        });
-    }
 }
 
 
+// page content
 let contentArray = [
     {"content box": 1, "text content": "I am the text content for content box 1", "image source": "/Images/bookstack.jpg"},
     {"content box": 2, "text content": "I am the text content for content box 2", "image source": "/Images/bookstack.jpg"},
@@ -76,14 +59,22 @@ let contentArray = [
     {"content box": 5, "text content": "I am the text content for content box 5", "image source": "/Images/bookstack.jpg"}
 ]
 
-contentArray.forEach(content => new ContentBox(content))
+contentArray.forEach(content => new ContentBox(content));
 
-// scrolly funcs 
-
-document.querySelectorAll('.down-button').forEach(button => button.addEventListener('click', event => {
-    document.querySelector(`.content-box[data-section = '${button.dataset.downButton + 1}']`).scrollIntoView({
-        behavior: "smooth"
+window.addEventListener('load', event => {
+    document.querySelectorAll('.down-button').forEach(button => {
+        button.addEventListener('click', event => {
+            document.querySelector(`.content-box[data-section = '${parseInt(button.dataset.downButton) + 1}']`).scrollIntoView({
+                behavior: "smooth"
+            })
+        })
     })
-}));
+    document.querySelectorAll('.up-button').forEach(button => {
+        button.addEventListener('click', event => {
+            document.querySelector(`.content-box[data-section = '${parseInt(button.dataset.upButton) - 1}']`).scrollIntoView({
+                behavior: "smooth"
+            })
+        })
+    })
 
-
+})
