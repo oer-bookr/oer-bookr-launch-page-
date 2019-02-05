@@ -9,6 +9,10 @@
 // @color-light-brown
 // @color-brown
 
+::-webkit-scrollbar {
+    display:none;
+}
+
 html {
     height: 100%;
     width: 100%;
@@ -17,6 +21,14 @@ html {
     background-size: cover;  
     background-image: url(/Images/bookstack.jpg);
     background-attachment: fixed;
+
+    @media @tablet {
+        background: green;
+    }
+
+    @media @phone {
+        background: white;
+    }
 }
 
 body {
@@ -26,8 +38,12 @@ body {
     width: 80%;
     margin: 0 auto;
 
+    @media @phone {
+        width: 100%;
+    }
+
     .content-box[data-section = '0'] {
-        background: yellow;
+        // background: yellow;
         display: flex;
         // flex-direction: row;
         justify-content: space-between;
@@ -84,7 +100,7 @@ body {
         display: flex;
         flex-direction: column;
         font-size: 5rem;
-        background: red;
+        // background: red;
         height: 100vh;
         width: 100%;
         justify-content: space-between;
@@ -98,9 +114,21 @@ body {
             align-items: center;
 
             p {
-                border-radius: 100%;
+                width: 50%;
+                height: auto;
+                background: peachpuff;
+                margin: 0 5rem 0 0;
+                border-radius: .5rem;
                 text-align: center;
                 text-justify: auto;
+
+                @media @phone {
+                    width: 100%;
+                    margin: 0;
+                    background: none;
+                    background-image: url(/Images/bookstack.jpg);
+                    border-radius: 0.5;
+                }
             }
 
             img {
@@ -108,27 +136,42 @@ body {
                 border-radius: 50%;
                 // height: 100%;
                 width: 50%;
+
+                @media @phone {
+                    display: none;
+                }
             }
         }
 
         .down-button {
             width: 0; 
             height: 0; 
-            border-left: 2rem solid transparent;
-            border-right: 2rem solid transparent;
-            border-top: 2rem solid black;
-            margin-bottom: 2rem;
+            border: 2rem solid wheat;
+            margin-bottom: 1rem;
+            border-radius: 100%;
             cursor: pointer;
+
+            &:hover {
+                padding: 1rem;
+                border: 1rem solid wheat;
+            }
         }
 
         .up-button {
             width: 0; 
             height: 0; 
-            border-left: 2rem solid transparent;
-            border-right: 2rem solid transparent;
-            border-bottom: 2rem solid black;
-            margin-top: 2rem;
+            border: 2rem solid wheat;
+            // border-left: 2rem solid transparent;
+            // border-right: 2rem solid transparent;
+            // border-bottom: 2rem solid @color-light-blue;
+            margin-top: 1rem;
+            border-radius: 100%;
             cursor: pointer;
+
+            &:hover {
+                border: 1rem solid wheat;
+                padding: 1rem;
+            }
         }
     }
 }
