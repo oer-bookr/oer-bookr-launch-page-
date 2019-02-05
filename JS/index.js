@@ -1,7 +1,7 @@
 // for use in random quote generator
 // Math.round(Math.random() * 10)
 
-// content box contructor
+// content box contructor class
 class ContentBox {
     constructor(contentSection) {
         this.contentSection = contentSection;
@@ -25,15 +25,16 @@ class ContentBox {
         this.content.classList.add('content');
         this.textContent = document.createElement('p');
         this.textContent.textContent = this.contentSection["text content"];
+        this.content.appendChild(this.textContent);
         this.imageContent = document.createElement('img');
         this.imageContent.src = this.contentSection["image source"];
-        this.content.appendChild(this.textContent);
         this.content.appendChild(this.imageContent);
 
         // event listeners
         window.addEventListener('load', () => this.implement());
     }
 
+    // box builder
     implement() {
         document.querySelector('.main-content').appendChild(this.section);
         if(this.contentSection["content box"] !== contentArray.length) {
@@ -52,15 +53,15 @@ class ContentBox {
 
 // page content
 let contentArray = [
-    {"content box": 1, "text content": "I am the text content for content box 1", "image source": "/Images/bookstack.jpg"},
-    {"content box": 2, "text content": "I am the text content for content box 2", "image source": "/Images/bookstack.jpg"},
-    {"content box": 3, "text content": "I am the text content for content box 3", "image source": "/Images/bookstack.jpg"},
-    {"content box": 4, "text content": "I am the text content for content box 4", "image source": "/Images/bookstack.jpg"},
-    {"content box": 5, "text content": "I am the text content for content box 5", "image source": "/Images/bookstack.jpg"}
-]
+    {"content box": 1, "text content": "The worlds most accessible open educational resource", "image source": "/Images/bookstack.jpg"},
+    {"content box": 2, "text content": "acess on your desktop tablet or mobile", "image source": "/Images/bookstack.jpg"},
+    {"content box": 3, "text content": "study, grow, and learn In the world's largest digital library", "image source": "/Images/bookstack.jpg"}
+];
 
 contentArray.forEach(content => new ContentBox(content));
 
+
+// scrolly func
 window.addEventListener('load', event => {
     document.querySelectorAll('.down-button').forEach(button => {
         button.addEventListener('click', event => {

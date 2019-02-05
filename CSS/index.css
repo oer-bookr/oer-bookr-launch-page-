@@ -148,14 +148,22 @@ body {
   width: 80%;
   margin: 0 auto;
 }
-body .top-content {
+body .content-box[data-section='0'] {
+  background: yellow;
   display: flex;
   justify-content: space-between;
   align-content: center;
   width: 100%;
   height: 100vh;
 }
-body .top-content .logo .logo-image {
+body .content-box[data-section='0'] .top-bar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+body .content-box[data-section='0'] .top-bar .logo-image {
+  object-fit: scale-down;
+  height: 100px;
   width: 200px;
   margin-top: 2rem;
   padding: 2rem 1rem 2rem 2rem;
@@ -163,7 +171,7 @@ body .top-content .logo .logo-image {
   margin-bottom: -2px;
   border-radius: 0.5rem;
 }
-body .top-content .top-nav {
+body .content-box[data-section='0'] .top-nav {
   padding: 0;
   width: 50%;
   margin-top: 2rem;
@@ -172,14 +180,14 @@ body .top-content .top-nav {
   justify-content: space-between;
   font-size: 2rem;
 }
-body .top-content .top-nav a {
+body .content-box[data-section='0'] .top-nav a {
   padding: 1rem;
   border-radius: 1rem;
   background: #99aabb;
   text-decoration: none;
   color: #221100;
 }
-body .top-content div .down-button {
+body .content-box[data-section='0'] div .down-button {
   position: absolute;
   bottom: 2rem;
 }
@@ -201,13 +209,16 @@ body .content-box .content {
   display: flex;
   width: 100%;
   height: 80%;
+  align-items: center;
 }
 body .content-box .content p {
-  border: 1px solid rebeccapurple;
   border-radius: 100%;
+  text-align: center;
+  text-justify: auto;
 }
 body .content-box .content img {
   object-fit: cover;
+  border-radius: 50%;
   width: 50%;
 }
 body .content-box .down-button {
