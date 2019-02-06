@@ -129,6 +129,9 @@ table {
 html {
   font-size: 62.5%;
 }
+* {
+  box-sizing: border-box;
+}
 html {
   background: yellow;
 }
@@ -168,6 +171,8 @@ body {
 }
 body .content-box[data-section='0'] {
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: space-between;
   align-content: center;
   width: 100%;
@@ -190,19 +195,31 @@ body .content-box[data-section='0'] .top-bar .logo-image {
 }
 body .content-box[data-section='0'] .top-nav {
   padding: 0;
-  width: 50%;
+  width: 10rem;
+  text-align: center;
   margin-top: 2rem;
   height: 4rem;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   font-size: 2rem;
 }
 body .content-box[data-section='0'] .top-nav a {
   padding: 1rem;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccbbaa;
   background: #ccbbaa;
   text-decoration: none;
-  color: #221100;
+  color: #224444;
+}
+body .content-box[data-section='0'] .top-nav a:hover {
+  background: none;
+  color: #ccbbaa;
+}
+body .content-box[data-section='0'] .random-quote {
+  font-size: 2rem;
+  color: #ccbbaa;
+  text-align: center;
 }
 body .content-box[data-section='0'] div .down-button {
   position: absolute;
@@ -249,6 +266,7 @@ body .content-box .content p {
 body .content-box .content img {
   object-fit: cover;
   border-radius: 50%;
+  border: 5rem solid transparent;
   width: 50%;
 }
 @media (max-width: 500px) {
@@ -265,8 +283,8 @@ body .content-box .down-button {
   cursor: pointer;
 }
 body .content-box .down-button:hover {
-  padding: 1rem;
-  border: 1rem solid #ccbbaa;
+  padding: 1.8rem;
+  border: 2px solid #ccbbaa;
 }
 body .content-box .up-button {
   width: 0;
@@ -277,8 +295,8 @@ body .content-box .up-button {
   cursor: pointer;
 }
 body .content-box .up-button:hover {
-  border: 1rem solid #ccbbaa;
-  padding: 1rem;
+  padding: 1.8rem;
+  border: 2px solid #ccbbaa;
 }
 .hide {
   visibility: hidden;
