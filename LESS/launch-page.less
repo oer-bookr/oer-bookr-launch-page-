@@ -19,7 +19,7 @@ html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;  
-    background-image: url(/Images/bookstack.jpg);
+    background-image: url(/Images/pretty\ trees.jpg);
     background-attachment: fixed;
 
     @media @tablet {
@@ -62,7 +62,7 @@ body {
                 width: 200px;
                 margin-top: 2rem;
                 padding: 2rem 1rem 2rem 2rem;
-                background: @color-light-blue;
+                background: @color-clam-shell;
                 margin-bottom: -2px;
                 border-radius: .5rem;
             }
@@ -80,7 +80,7 @@ body {
             a {
                 padding: 1rem;
                 border-radius: 1rem;
-                background: @color-light-blue;
+                background: @color-clam-shell;
                 text-decoration: none;
                 color: @color-wood-brown;
             }
@@ -107,7 +107,8 @@ body {
         align-items: center;
 
         .content {
-            background: beige;
+            border-radius: .5rem;
+            background: @color-light-green;
             display: flex;
             width: 100%;
             height: 80%;
@@ -117,7 +118,7 @@ body {
                 width: 50%;
                 height: auto;
                 background: peachpuff;
-                margin: 0 5rem 0 0;
+                margin: 0 5rem;
                 border-radius: .5rem;
                 text-align: center;
                 text-justify: auto;
@@ -126,7 +127,7 @@ body {
                     width: 100%;
                     margin: 0;
                     background: none;
-                    background-image: url(/Images/bookstack.jpg);
+                    background-image: url(/Images/pretty\ trees.jpg);
                     border-radius: 0.5;
                 }
             }
@@ -146,21 +147,21 @@ body {
         .down-button {
             width: 0; 
             height: 0; 
-            border: 2rem solid wheat;
+            border: 2rem solid @color-clam-shell;
             margin-bottom: 1rem;
             border-radius: 100%;
             cursor: pointer;
 
             &:hover {
                 padding: 1rem;
-                border: 1rem solid wheat;
+                border: 1rem solid @color-clam-shell;
             }
         }
 
         .up-button {
             width: 0; 
             height: 0; 
-            border: 2rem solid wheat;
+            border: 2rem solid @color-clam-shell;
             // border-left: 2rem solid transparent;
             // border-right: 2rem solid transparent;
             // border-bottom: 2rem solid @color-light-blue;
@@ -169,7 +170,7 @@ body {
             cursor: pointer;
 
             &:hover {
-                border: 1rem solid wheat;
+                border: 1rem solid @color-clam-shell;
                 padding: 1rem;
             }
         }
