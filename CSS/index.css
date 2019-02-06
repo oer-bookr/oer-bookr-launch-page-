@@ -147,16 +147,6 @@ html {
   background-image: url(/Images/pretty\ trees.jpg);
   background-attachment: fixed;
 }
-@media (max-width: 800px) {
-  html {
-    background: green;
-  }
-}
-@media (max-width: 500px) {
-  html {
-    background: white;
-  }
-}
 body {
   display: flex;
   align-items: center;

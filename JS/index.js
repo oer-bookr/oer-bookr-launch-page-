@@ -80,8 +80,6 @@ window.addEventListener('load', event => {
     let randomQuote = quotes.filter(quote => quote["index"] == randomIndex);
     document.querySelector('.quote').textContent = randomQuote[0]["quote"];
     document.querySelector('.author').textContent = randomQuote[0]["author"];
-    console.log(randomQuote[0]["quote"]);
-    console.log(randomQuote[0]["author"]);
 })
 
 
