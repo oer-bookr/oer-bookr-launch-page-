@@ -51,7 +51,7 @@ class ContentBox {
 // page content
 let contentArray = [
     {"content box": 1, "text content": "The worlds most accessible open educational resource", "image source": "/Images/bookstack.jpg"},
-    {"content box": 2, "text content": "Access on your desktop tablet or mobile", "image source": "/Images/bookstack.jpg"},
+    {"content box": 2, "text content": "Access on your desktop tablet or mobile", "image source": "/Images/phone\ learnin.jpg"},
     {"content box": 3, "text content": "Study, grow, and learn In the world's largest digital library", "image source": "/Images/bookstack.jpg"}
 ];
 
@@ -98,4 +98,27 @@ window.addEventListener('load', event => {
     })
 })
 
+// Wait, don't shoot! Okay, okay, shoot me... just don't take me money
 
+// document.querySelector('.ham').addEventListener('click', event => {
+//     document.querySelector('.burger').classList.toggle('uno-equis');
+//     document.querySelector('.top-bun').classList.toggle('top-bun-spin');
+//     if(document.querySelector('.patty').style.display === 'none') {
+//         document.querySelector('.patty').style.display = 'block'
+//     } else {
+//         document.querySelector('.patty').style.display = 'none'
+//     }
+//     document.querySelector('.bottom-bun').classList.toggle('bottom-bun-spin');
+// })
+
+document.querySelector('.ham').addEventListener('click', event => {
+    if(document.querySelector('.burger').classList.contains('uno-equis') == true){
+        document.querySelector('.burger').classList.toggle('no-mas-equis');
+        document.querySelector('.burger').classList.toggle('uno-equis');
+    } else if(document.querySelector('.burger').classList.contains('no-mas-equis') == true) {
+        document.querySelector('.burger').classList.toggle('uno-equis');
+        document.querySelector('.burger').classList.toggle('no-mas-equis');
+    } else {
+        document.querySelector('.burger').classList.toggle('uno-equis');
+    }
+})
