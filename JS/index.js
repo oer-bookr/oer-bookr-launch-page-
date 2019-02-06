@@ -1,6 +1,3 @@
-// for use in random quote generator
-// Math.ceil(Math.random() * 10)
-
 // content box contructor class
 class ContentBox {
     constructor(contentSection) {
@@ -54,8 +51,8 @@ class ContentBox {
 // page content
 let contentArray = [
     {"content box": 1, "text content": "The worlds most accessible open educational resource", "image source": "/Images/bookstack.jpg"},
-    {"content box": 2, "text content": "acess on your desktop tablet or mobile", "image source": "/Images/bookstack.jpg"},
-    {"content box": 3, "text content": "study, grow, and learn In the world's largest digital library", "image source": "/Images/bookstack.jpg"}
+    {"content box": 2, "text content": "Access on your desktop tablet or mobile", "image source": "/Images/bookstack.jpg"},
+    {"content box": 3, "text content": "Study, grow, and learn In the world's largest digital library", "image source": "/Images/bookstack.jpg"}
 ];
 
 contentArray.forEach(content => new ContentBox(content));

@@ -72,6 +72,25 @@ body {
             flex-direction: column;
             justify-content: space-between;
             font-size: 2rem;
+
+            .ham {
+                height: 0;
+                width: 0;
+                border: 5rem solid red;
+                align-items: center;
+
+                .burger {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    span {
+                        width: 5rem;
+                        border: 5px solid white;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
     
             a {
                 padding: 1rem;
@@ -116,7 +135,7 @@ body {
 
         .content {
             border-radius: .5rem;
-            background: @color-light-green;
+            // background: @color-clam-shell;
             display: flex;
             width: 100%;
             height: 80%;
@@ -125,9 +144,10 @@ body {
             p {
                 width: 50%;
                 height: auto;
-                background: peachpuff;
+                background: @color-clam-shell;
                 margin: 0 5rem;
                 border-radius: .5rem;
+                padding: 2rem;
                 text-align: center;
                 text-justify: auto;
 
@@ -135,7 +155,8 @@ body {
                     width: 100%;
                     margin: 0;
                     background: none;
-                    background-image: url(/Images/pretty\ trees.jpg);
+                    background-image: url(/Images/bookstack.jpg);
+                    background-size: cover;
                     border-radius: 0.5;
                 }
             }

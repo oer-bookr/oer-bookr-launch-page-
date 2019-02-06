@@ -154,7 +154,7 @@ body {
   width: 80%;
   margin: 0 auto;
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   body {
     width: 100%;
   }
@@ -194,6 +194,22 @@ body .content-box[data-section='0'] .top-nav {
   justify-content: space-between;
   font-size: 2rem;
 }
+body .content-box[data-section='0'] .top-nav .ham {
+  height: 0;
+  width: 0;
+  border: 5rem solid red;
+  align-items: center;
+}
+body .content-box[data-section='0'] .top-nav .ham .burger {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .content-box[data-section='0'] .top-nav .ham .burger span {
+  width: 5rem;
+  border: 5px solid white;
+  margin-bottom: 5px;
+}
 body .content-box[data-section='0'] .top-nav a {
   padding: 1rem;
   border-radius: 0.5rem;
@@ -229,7 +245,6 @@ body .content-box {
 }
 body .content-box .content {
   border-radius: 0.5rem;
-  background: #557777;
   display: flex;
   width: 100%;
   height: 80%;
@@ -238,18 +253,20 @@ body .content-box .content {
 body .content-box .content p {
   width: 50%;
   height: auto;
-  background: peachpuff;
+  background: #ccbbaa;
   margin: 0 5rem;
   border-radius: 0.5rem;
+  padding: 2rem;
   text-align: center;
   text-justify: auto;
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   body .content-box .content p {
     width: 100%;
     margin: 0;
     background: none;
-    background-image: url(/Images/pretty\ trees.jpg);
+    background-image: url(/Images/bookstack.jpg);
+    background-size: cover;
     border-radius: 0.5;
   }
 }
@@ -259,7 +276,7 @@ body .content-box .content img {
   border: 5rem solid transparent;
   width: 50%;
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   body .content-box .content img {
     display: none;
   }
