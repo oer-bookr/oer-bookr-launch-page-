@@ -42,6 +42,10 @@ body {
         align-content: center;
         width: 100%;
         height: 100vh;
+
+        @media @phone {
+            width: 90%;
+        }
     
         .top-bar {
             display: flex;
@@ -218,6 +222,26 @@ body {
                 border: 2px solid @color-clam-shell;
                 color: @color-clam-shell;
             }
+        }
+    }
+
+    footer {
+        display: flex;
+        height: 10vh;
+        width: 50%;
+        overflow: hidden;
+        margin-top: -10vh;
+        justify-content: space-around;
+        justify-self: flex-start;
+        align-items: center;
+
+        @media @phone {
+            width: 90%;
+        }
+
+        img {
+            object-fit: contain;
+            height: 8vh;
         }
     }
 }

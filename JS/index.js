@@ -24,10 +24,10 @@ class ContentBox {
         this.content.classList.add('content');
         this.textContent = document.createElement('p');
         this.textContent.textContent = this.contentSection["text content"];
-        this.content.appendChild(this.textContent);
+        // this.content.appendChild(this.textContent);
         this.imageContent = document.createElement('img');
         this.imageContent.src = this.contentSection["image source"];
-        this.content.appendChild(this.imageContent);
+        // this.content.appendChild(this.imageContent);
 
         // event listeners
         window.addEventListener('load', () => this.implement());
@@ -36,15 +36,36 @@ class ContentBox {
     // box builder
     implement() {
         document.querySelector('.main-content').appendChild(this.section);
-        if(this.contentSection["content box"] !== contentArray.length) {
-            this.section.appendChild(this.upScrolly);
-            this.section.appendChild(this.content);
-            this.section.appendChild(this.downScrolly);
+        if(this.contentSection["content box"] % 2 !== 0) {
+            if(this.contentSection["content box"] !== contentArray.length) {
+                this.section.appendChild(this.upScrolly);
+                this.section.appendChild(this.content);
+                this.content.appendChild(this.textContent);
+                this.content.appendChild(this.imageContent);
+                this.section.appendChild(this.downScrolly);
+            } else {
+                this.section.appendChild(this.upScrolly);
+                this.section.appendChild(this.content);
+                this.content.appendChild(this.textContent);
+                this.content.appendChild(this.imageContent);
+                this.section.appendChild(this.downScrolly);
+                this.downScrolly.classList.add('hide');
+            }
         } else {
-            this.section.appendChild(this.upScrolly);
-            this.section.appendChild(this.content);
-            this.section.appendChild(this.downScrolly);
-            this.downScrolly.classList.add('hide');
+            if(this.contentSection["content box"] !== contentArray.length) {
+                this.section.appendChild(this.upScrolly);
+                this.section.appendChild(this.content);
+                this.content.appendChild(this.imageContent);
+                this.content.appendChild(this.textContent);
+                this.section.appendChild(this.downScrolly);
+            } else {
+                this.section.appendChild(this.upScrolly);
+                this.section.appendChild(this.content);
+                this.content.appendChild(this.imageContent);
+                this.content.appendChild(this.textContent);
+                this.section.appendChild(this.downScrolly);
+                this.downScrolly.classList.add('hide');
+            }    
         }
     }
 }
@@ -100,7 +121,7 @@ window.addEventListener('load', event => {
     })
 })
 
-// Wait, don't shoot! Okay, okay, shoot me... just don't take me money
+// Burger 
 document.querySelector('.ham').addEventListener('click', event => {
     if(document.querySelector('.burger').classList.contains('uno-equis') == true){
         document.querySelector('.burger').classList.toggle('uno-equis');
