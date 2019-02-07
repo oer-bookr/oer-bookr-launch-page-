@@ -122,54 +122,56 @@ window.addEventListener('load', event => {
 })
 
 // Burger 
-document.querySelector('.ham').addEventListener('click', event => {
-    if(document.querySelector('.burger').classList.contains('uno-equis') == true){
-        document.querySelector('.burger').classList.toggle('uno-equis');
-        document.querySelector('.burger').style.paddingTop = '45%';
-        document.querySelector('.burger').classList.toggle('no-mas-equis');
-    } else if(document.querySelector('.burger').classList.contains('no-mas-equis') == true) {
-        document.querySelector('.burger').classList.toggle('no-mas-equis');
-        document.querySelector('.burger').style.paddingTop = '27.5%';
-        document.querySelector('.burger').classList.toggle('uno-equis');
-    } else {
-        document.querySelector('.burger').classList.toggle('uno-equis');
-    };
-
-    if(document.querySelector('.top-bun').classList.contains('top-bun-spin') == true){
-        document.querySelector('.top-bun').classList.toggle('top-bun-spin');
-        document.querySelector('.top-bun').style.transform = 'rotate(45deg)';
-        document.querySelector('.top-bun').style.marginBottom = '-12px';
-        document.querySelector('.top-bun').classList.toggle('top-bun-spin-back');
-    } else if(document.querySelector('.top-bun').classList.contains('top-bun-spin-back') == true) {
-        document.querySelector('.top-bun').classList.toggle('top-bun-spin-back');
-        document.querySelector('.top-bun').style.transform = 'rotate(0deg)';
-        document.querySelector('.top-bun').style.marginBottom = '5px';
-        document.querySelector('.top-bun').classList.toggle('top-bun-spin');
-    } else {
-        document.querySelector('.top-bun').classList.toggle('top-bun-spin');
-    };
-
-    if(document.querySelector('.patty').style.visibility  === 'hidden') {
-        document.querySelector('.patty').style.visibility  = 'visible'
-    } else {
-        document.querySelector('.patty').style.visibility  = 'hidden'
-    }
-
-    if(document.querySelector('.bottom-bun').classList.contains('bottom-bun-spin') == true){
-        document.querySelector('.bottom-bun').classList.toggle('bottom-bun-spin');
-        document.querySelector('.bottom-bun').style.transform = 'rotate(-45deg)';
-        document.querySelector('.bottom-bun').style.marginBottom = '12px';
-        document.querySelector('.bottom-bun').classList.toggle('bottom-bun-spin-back');
-    } else if(document.querySelector('.bottom-bun').classList.contains('bottom-bun-spin-back') == true) {
-        document.querySelector('.bottom-bun').classList.toggle('bottom-bun-spin-back');
-        document.querySelector('.bottom-bun').style.transform = 'rotate(0deg)';
-        document.querySelector('.bottom-bun').style.marginBottom = '5px';
-        document.querySelector('.bottom-bun').classList.toggle('bottom-bun-spin');
-    } else {
-        document.querySelector('.bottom-bun').classList.toggle('bottom-bun-spin');
-    };
-
-    document.querySelectorAll('.top-nav a').forEach(tag => {
-        tag.classList.toggle('hide');
+window.addEventListener('load', event => {
+    document.querySelector('.ham').addEventListener('click', event => {
+        if(document.querySelector('.burger').classList.contains('uno-equis') == true){
+            document.querySelector('.burger').classList.toggle('uno-equis');
+            document.querySelector('.burger').style.paddingTop = '45%';
+            document.querySelector('.burger').classList.toggle('no-mas-equis');
+        } else if(document.querySelector('.burger').classList.contains('no-mas-equis') == true) {
+            document.querySelector('.burger').classList.toggle('no-mas-equis');
+            document.querySelector('.burger').style.paddingTop = '27.5%';
+            document.querySelector('.burger').classList.toggle('uno-equis');
+        } else {
+            document.querySelector('.burger').classList.toggle('uno-equis');
+        };
+    
+        if(document.querySelector('.top-bun').classList.contains('top-bun-spin') == true){
+            document.querySelector('.top-bun').classList.toggle('top-bun-spin');
+            document.querySelector('.top-bun').style.transform = 'rotate(45deg)';
+            document.querySelector('.top-bun').style.marginBottom = '-12px';
+            document.querySelector('.top-bun').classList.toggle('top-bun-spin-back');
+        } else if(document.querySelector('.top-bun').classList.contains('top-bun-spin-back') == true) {
+            document.querySelector('.top-bun').classList.toggle('top-bun-spin-back');
+            document.querySelector('.top-bun').style.transform = 'rotate(0deg)';
+            document.querySelector('.top-bun').style.marginBottom = '5px';
+            document.querySelector('.top-bun').classList.toggle('top-bun-spin');
+        } else {
+            document.querySelector('.top-bun').classList.toggle('top-bun-spin');
+        };
+    
+        if(document.querySelector('.patty').style.visibility  === 'hidden') {
+            document.querySelector('.patty').style.visibility  = 'visible'
+        } else {
+            document.querySelector('.patty').style.visibility  = 'hidden'
+        }
+    
+        if(document.querySelector('.bottom-bun').classList.contains('bottom-bun-spin') == true){
+            document.querySelector('.bottom-bun').classList.toggle('bottom-bun-spin');
+            document.querySelector('.bottom-bun').style.transform = 'rotate(-45deg)';
+            document.querySelector('.bottom-bun').style.marginBottom = '12px';
+            document.querySelector('.bottom-bun').classList.toggle('bottom-bun-spin-back');
+        } else if(document.querySelector('.bottom-bun').classList.contains('bottom-bun-spin-back') == true) {
+            document.querySelector('.bottom-bun').classList.toggle('bottom-bun-spin-back');
+            document.querySelector('.bottom-bun').style.transform = 'rotate(0deg)';
+            document.querySelector('.bottom-bun').style.marginBottom = '5px';
+            document.querySelector('.bottom-bun').classList.toggle('bottom-bun-spin');
+        } else {
+            document.querySelector('.bottom-bun').classList.toggle('bottom-bun-spin');
+        };
+    
+        document.querySelectorAll('.top-nav a').forEach(tag => {
+            tag.classList.toggle('hide');
+        })
     })
 })
