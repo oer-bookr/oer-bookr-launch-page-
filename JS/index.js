@@ -13,9 +13,11 @@ class ContentBox {
         this.upScrolly = document.createElement('div');
         this.upScrolly.classList.add('up-button');
         this.upScrolly.dataset.upButton = `${this.contentSection["content box"]}`;
+        this.upScrolly.textContent = '^'
         this.downScrolly = document.createElement('div');
         this.downScrolly.classList.add('down-button');
         this.downScrolly.dataset.downButton = `${this.contentSection["content box"]}`;
+        this.downScrolly.textContent = '^';
 
         // content
         this.content = document.createElement('div');
@@ -99,26 +101,54 @@ window.addEventListener('load', event => {
 })
 
 // Wait, don't shoot! Okay, okay, shoot me... just don't take me money
-
-// document.querySelector('.ham').addEventListener('click', event => {
-//     document.querySelector('.burger').classList.toggle('uno-equis');
-//     document.querySelector('.top-bun').classList.toggle('top-bun-spin');
-//     if(document.querySelector('.patty').style.display === 'none') {
-//         document.querySelector('.patty').style.display = 'block'
-//     } else {
-//         document.querySelector('.patty').style.display = 'none'
-//     }
-//     document.querySelector('.bottom-bun').classList.toggle('bottom-bun-spin');
-// })
-
 document.querySelector('.ham').addEventListener('click', event => {
     if(document.querySelector('.burger').classList.contains('uno-equis') == true){
-        document.querySelector('.burger').classList.toggle('no-mas-equis');
         document.querySelector('.burger').classList.toggle('uno-equis');
+        document.querySelector('.burger').style.paddingTop = '45%';
+        document.querySelector('.burger').classList.toggle('no-mas-equis');
     } else if(document.querySelector('.burger').classList.contains('no-mas-equis') == true) {
-        document.querySelector('.burger').classList.toggle('uno-equis');
         document.querySelector('.burger').classList.toggle('no-mas-equis');
+        document.querySelector('.burger').style.paddingTop = '27.5%';
+        document.querySelector('.burger').classList.toggle('uno-equis');
     } else {
         document.querySelector('.burger').classList.toggle('uno-equis');
+    };
+
+    if(document.querySelector('.top-bun').classList.contains('top-bun-spin') == true){
+        document.querySelector('.top-bun').classList.toggle('top-bun-spin');
+        document.querySelector('.top-bun').style.transform = 'rotate(45deg)';
+        document.querySelector('.top-bun').style.marginBottom = '-12px';
+        document.querySelector('.top-bun').classList.toggle('top-bun-spin-back');
+    } else if(document.querySelector('.top-bun').classList.contains('top-bun-spin-back') == true) {
+        document.querySelector('.top-bun').classList.toggle('top-bun-spin-back');
+        document.querySelector('.top-bun').style.transform = 'rotate(0deg)';
+        document.querySelector('.top-bun').style.marginBottom = '5px';
+        document.querySelector('.top-bun').classList.toggle('top-bun-spin');
+    } else {
+        document.querySelector('.top-bun').classList.toggle('top-bun-spin');
+    };
+
+    if(document.querySelector('.patty').style.visibility  === 'hidden') {
+        document.querySelector('.patty').style.visibility  = 'visible'
+    } else {
+        document.querySelector('.patty').style.visibility  = 'hidden'
     }
+
+    if(document.querySelector('.bottom-bun').classList.contains('bottom-bun-spin') == true){
+        document.querySelector('.bottom-bun').classList.toggle('bottom-bun-spin');
+        document.querySelector('.bottom-bun').style.transform = 'rotate(-45deg)';
+        document.querySelector('.bottom-bun').style.marginBottom = '12px';
+        document.querySelector('.bottom-bun').classList.toggle('bottom-bun-spin-back');
+    } else if(document.querySelector('.bottom-bun').classList.contains('bottom-bun-spin-back') == true) {
+        document.querySelector('.bottom-bun').classList.toggle('bottom-bun-spin-back');
+        document.querySelector('.bottom-bun').style.transform = 'rotate(0deg)';
+        document.querySelector('.bottom-bun').style.marginBottom = '5px';
+        document.querySelector('.bottom-bun').classList.toggle('bottom-bun-spin');
+    } else {
+        document.querySelector('.bottom-bun').classList.toggle('bottom-bun-spin');
+    };
+
+    document.querySelectorAll('.top-nav a').forEach(tag => {
+        tag.classList.toggle('hide');
+    })
 })

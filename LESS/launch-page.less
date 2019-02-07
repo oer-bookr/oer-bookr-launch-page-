@@ -35,11 +35,9 @@ body {
     }
 
     .content-box[data-section = '0'] {
-        // background: yellow;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
-        // flex-direction: row;
         justify-content: space-between;
         align-content: center;
         width: 100%;
@@ -89,28 +87,6 @@ body {
                     align-items: center;
                     padding-top: 27.5%;        
 
-                    // &:hover {
-                    //     animation-name: equis;
-                    //     animation-duration: 300ms;
-                    //     animation-fill-mode: forwards;
-                        // padding-top: 45%;
-
-                        // .top-bun {
-                        //     transform: rotate(45deg);
-                        //     margin-bottom: 0;
-                        //     margin-bottom: -4px;   
-                        // }
-
-                        // .patty {
-                        //     display: none;
-                        // }
-
-                        // .bottom-bun {
-                        //     transform: rotate(-45deg);
-                        //     margin-bottom: 4px;   
-                        // }
-                    // }
-
                     span {
                         width: 3rem;
                         background: @color-dark-green;
@@ -122,6 +98,7 @@ body {
             }
     
             a {
+                margin-top: 1rem;
                 padding: 1rem;
                 border-radius: .5rem;
                 border: 1px solid @color-clam-shell;
@@ -182,10 +159,11 @@ body {
                 text-justify: auto;
 
                 @media @phone {
+                    color: @color-clam-shell;
                     width: 100%;
                     margin: 0;
                     background: none;
-                    background-image: url(/Images/bookstack.jpg);
+                    // background-image: url(/Images/bookstack.jpg);
                     background-size: cover;
                     border-radius: 0.5;
                 }
@@ -206,33 +184,40 @@ body {
         }
 
         .down-button {
-            width: 0; 
-            height: 0; 
-            border: 2rem solid @color-clam-shell;
+            width: 4rem; 
+            height: 4rem;
+            transform: rotate(-180deg);
+            text-align: center;
+            color: @color-dark-green;
+            background: @color-clam-shell;
+            border: .2rem solid @color-clam-shell;
             margin-bottom: 1rem;
             border-radius: 100%;
             cursor: pointer;
 
             &:hover {
-                padding: 1.8rem;
+                background: transparent;
                 border: 2px solid @color-clam-shell;
+                color: @color-clam-shell;
             }
         }
 
         .up-button {
-            width: 0; 
-            height: 0; 
-            border: 2rem solid @color-clam-shell;
-            // border-left: 2rem solid transparent;
-            // border-right: 2rem solid transparent;
-            // border-bottom: 2rem solid @color-light-blue;
+            width: 4rem; 
+            height: 4rem; 
+            text-align: center;
+            align-items: center;
+            color: @color-dark-green;
+            background: @color-clam-shell;
+            border: .2rem solid @color-clam-shell;
             margin-top: 1rem;
             border-radius: 100%;
             cursor: pointer;
 
             &:hover {
-                padding: 1.8rem;
+                background: transparent;
                 border: 2px solid @color-clam-shell;
+                color: @color-clam-shell;
             }
         }
     }
@@ -271,14 +256,14 @@ body {
 @keyframes top-bun-spin {
     100% {
         transform: rotate(45deg);
-        margin-bottom: -4px;   
+        margin-bottom: -12px;   
     }
 }
 
 @keyframes bottom-bun-spin {
     100% {
         transform: rotate(-45deg);
-        margin-bottom: 4px;      
+        margin-bottom: 12px;      
     }
 }
 
@@ -310,14 +295,14 @@ body {
 
 @keyframes top-bun-spin-back {
     100% {
-        transform: rotate(-45deg);
+        transform: rotate(0deg);
         margin-bottom: 5px;
     }
 }
 
 @keyframes bottom-bun-spin-back {
     100% {
-        transform: rotate(45deg);
+        transform: rotate(0deg);
         margin-bottom: 5px;
     }
 }

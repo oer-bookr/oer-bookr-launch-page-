@@ -215,6 +215,7 @@ body .content-box[data-section='0'] .top-nav .ham .burger span {
   margin-bottom: 5px;
 }
 body .content-box[data-section='0'] .top-nav a {
+  margin-top: 1rem;
   padding: 1rem;
   border-radius: 0.5rem;
   border: 1px solid #ccbbaa;
@@ -268,10 +269,10 @@ body .content-box .content p {
 }
 @media (max-width: 600px) {
   body .content-box .content p {
+    color: #ccbbaa;
     width: 100%;
     margin: 0;
     background: none;
-    background-image: url(/Images/bookstack.jpg);
     background-size: cover;
     border-radius: 0.5;
   }
@@ -288,28 +289,38 @@ body .content-box .content img {
   }
 }
 body .content-box .down-button {
-  width: 0;
-  height: 0;
-  border: 2rem solid #ccbbaa;
+  width: 4rem;
+  height: 4rem;
+  transform: rotate(-180deg);
+  text-align: center;
+  color: #224444;
+  background: #ccbbaa;
+  border: 0.2rem solid #ccbbaa;
   margin-bottom: 1rem;
   border-radius: 100%;
   cursor: pointer;
 }
 body .content-box .down-button:hover {
-  padding: 1.8rem;
+  background: transparent;
   border: 2px solid #ccbbaa;
+  color: #ccbbaa;
 }
 body .content-box .up-button {
-  width: 0;
-  height: 0;
-  border: 2rem solid #ccbbaa;
+  width: 4rem;
+  height: 4rem;
+  text-align: center;
+  align-items: center;
+  color: #224444;
+  background: #ccbbaa;
+  border: 0.2rem solid #ccbbaa;
   margin-top: 1rem;
   border-radius: 100%;
   cursor: pointer;
 }
 body .content-box .up-button:hover {
-  padding: 1.8rem;
+  background: transparent;
   border: 2px solid #ccbbaa;
+  color: #ccbbaa;
 }
 .hide {
   visibility: hidden;
@@ -337,13 +348,13 @@ body .content-box .up-button:hover {
 @keyframes top-bun-spin {
   100% {
     transform: rotate(45deg);
-    margin-bottom: -4px;
+    margin-bottom: -12px;
   }
 }
 @keyframes bottom-bun-spin {
   100% {
     transform: rotate(-45deg);
-    margin-bottom: 4px;
+    margin-bottom: 12px;
   }
 }
 .no-mas-equis {
@@ -368,13 +379,13 @@ body .content-box .up-button:hover {
 }
 @keyframes top-bun-spin-back {
   100% {
-    transform: rotate(-45deg);
+    transform: rotate(0deg);
     margin-bottom: 5px;
   }
 }
 @keyframes bottom-bun-spin-back {
   100% {
-    transform: rotate(45deg);
+    transform: rotate(0deg);
     margin-bottom: 5px;
   }
 }
