@@ -24,10 +24,8 @@ class ContentBox {
         this.content.classList.add('content');
         this.textContent = document.createElement('p');
         this.textContent.textContent = this.contentSection["text content"];
-        // this.content.appendChild(this.textContent);
         this.imageContent = document.createElement('img');
         this.imageContent.src = this.contentSection["image source"];
-        // this.content.appendChild(this.imageContent);
 
         // event listeners
         window.addEventListener('load', () => this.implement());

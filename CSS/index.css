@@ -344,7 +344,7 @@ body footer {
 }
 body footer img {
   object-fit: contain;
-  height: 8vh;
+  height: 5vh;
 }
 .hide {
   visibility: hidden;
