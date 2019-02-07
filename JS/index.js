@@ -54,7 +54,7 @@ class ContentBox {
 let contentArray = [
     {"content box": 1, "text content": "The worlds most accessible open educational resource", "image source": "/Images/bookstack.jpg"},
     {"content box": 2, "text content": "Access on your desktop tablet or mobile", "image source": "/Images/phone\ learnin.jpg"},
-    {"content box": 3, "text content": "Study, grow, and learn In the world's largest digital library", "image source": "/Images/bookstack.jpg"}
+    {"content box": 3, "text content": "Study, grow, and learn In the world's largest digital library", "image source": "/Images/learnin.jpg"}
 ];
 
 contentArray.forEach(content => new ContentBox(content));
