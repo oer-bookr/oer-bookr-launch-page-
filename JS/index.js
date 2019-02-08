@@ -147,13 +147,19 @@ window.addEventListener('load', event => {
         } else {
             document.querySelector('.top-bun').classList.toggle('top-bun-spin');
         };
-    
-        if(document.querySelector('.patty').style.visibility  === 'hidden') {
-            document.querySelector('.patty').style.visibility  = 'visible'
+
+        if(document.querySelector('.patty').classList.contains('patty-go-away') == true) {
+            document.querySelector('.patty').classList.toggle('patty-go-away');
+            document.querySelector('.patty').style.visibility = 'hidden';
+            document.querySelector('.patty').classList.toggle('patty-come-back');
+        } else if(document.querySelector('.patty').classList.contains('patty-come-back') == true) {
+            document.querySelector('.patty').classList.toggle('patty-come-back');
+            document.querySelector('.patty').style.visibility = 'visible';
+            document.querySelector('.patty').classList.toggle('patty-go-away');
         } else {
-            document.querySelector('.patty').style.visibility  = 'hidden'
+            document.querySelector('.patty').classList.toggle('patty-go-away');
         }
-    
+        
         if(document.querySelector('.bottom-bun').classList.contains('bottom-bun-spin') == true){
             document.querySelector('.bottom-bun').classList.toggle('bottom-bun-spin');
             document.querySelector('.bottom-bun').style.transform = 'rotate(-45deg)';
@@ -173,3 +179,5 @@ window.addEventListener('load', event => {
         })
     })
 })
+
+

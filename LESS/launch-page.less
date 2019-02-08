@@ -264,6 +264,12 @@ body {
     animation-fill-mode: forwards;
 }
 
+.patty-go-away {
+    animation-name: patty-go-away;
+    animation-duration: 50ms;
+    animation-fill-mode: forwards;
+}
+
 .bottom-bun-spin {
     animation-name: bottom-bun-spin;
     animation-duration: 300ms;
@@ -280,6 +286,12 @@ body {
     100% {
         transform: rotate(45deg);
         margin-bottom: -12px;   
+    }
+}
+
+@keyframes patty-go-away {
+    100% {
+        visibility: hidden;
     }
 }
 
@@ -304,6 +316,13 @@ body {
     animation-fill-mode: forwards;
 }
 
+.patty-come-back {
+    animation-name: patty-come-back;
+    animation-delay: 200ms;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards;
+}
+
 .bottom-bun-spin-back {
     animation-name: bottom-bun-spin-back;
     animation-duration: 300ms;
@@ -320,6 +339,12 @@ body {
     100% {
         transform: rotate(0deg);
         margin-bottom: 5px;
+    }
+}
+
+@keyframes patty-come-back {
+    100% {
+        visibility: visible; 
     }
 }
 
